@@ -24,10 +24,18 @@ const Navbar = () => {
       >
         <Stack direction="row" gap={10}>
           <Stack direction="row" justifyContent="center" alignItems="center">
-            <IconButton color="secondary">
+            <IconButton
+              color="secondary"
+              onClick={() => window.location.reload()}
+            >
               <HouseIcon />
             </IconButton>
-            <Typography variant="h5" fontWeight={600}>
+            <Typography
+              variant="h5"
+              fontWeight={600}
+              onClick={() => window.location.reload()}
+              sx={{ cursor: "pointer" }}
+            >
               Estatery
             </Typography>
           </Stack>

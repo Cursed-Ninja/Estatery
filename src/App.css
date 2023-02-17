@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  background-color: #F8F7FD;
+  background-color: #f8f7fd;
+  box-sizing: border-box;
 }
 
 .App-logo {
@@ -36,4 +37,29 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.ribbon-below {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #7065ee;
+  left: 70px;
+  top: 60%;
+  transform: rotate(45deg);
+  border-radius: 2px;
+}
+
+.ribbon {
+  position: absolute;
+  height: 25px;
+  padding: 5px 25px;
+  background-color: #7065ee;
+  color: white;
+  left: 65px;
+  top: 56%;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

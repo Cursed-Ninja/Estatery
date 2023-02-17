@@ -29,6 +29,7 @@ const realEstates = [...Array(30)].map(() => ({
         return "Apartment";
     }
   })(),
+  popular: faker.datatype.boolean(),
 }));
 
 const Context = ({ children }) => {

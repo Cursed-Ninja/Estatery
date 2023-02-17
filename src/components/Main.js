@@ -55,28 +55,34 @@ const Main = () => {
       <Grid item xs={12}>
         <Filters />
       </Grid>
-      {realEstates.map((realEstate) => {
-        if (
-          filter.Name !== "" &&
-          realEstate.title.toLowerCase().indexOf(filter.Name.toLowerCase()) ===
-            -1
-        )
-          return <></>;
-        if (
-          filter.Price[0] > realEstate.price ||
-          filter.Price[1] < realEstate.price
-        )
-          return <></>;
-        if (filter.Type !== "All" && filter.Type !== realEstate.type)
-          return <></>;
-        if (filter.Date && !moment(filter.Date).isSame(realEstate.date, "day"))
-          return <></>;
-        return (
-          <Grid item xs={12} sm={6} md={4}>
-            <PropertyCard data={realEstate} />
-          </Grid>
-        );
-      })}
+      <Grid item xs={12} container spacing={10}>
+        {realEstates.map((realEstate) => {
+          if (
+            filter.Name !== "" &&
+            realEstate.title
+              .toLowerCase()
+              .indexOf(filter.Name.toLowerCase()) === -1
+          )
+            return <></>;
+          if (
+            filter.Price[0] > realEstate.price ||
+            filter.Price[1] < realEstate.price
+          )
+            return <></>;
+          if (filter.Type !== "All" && filter.Type !== realEstate.type)
+            return <></>;
+          if (
+            filter.Date &&
+            !moment(filter.Date).isSame(realEstate.date, "day")
+          )
+            return <></>;
+          return (
+            <Grid item xs={12} sm={6} md={4} position="relative">
+              <PropertyCard data={realEstate} />
+            </Grid>
+          );
+        })}
+      </Grid>
     </Grid>
   );
 };

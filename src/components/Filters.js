@@ -128,7 +128,7 @@ const Filter = () => {
             alignItems="center"
           >
             <Typography variant="bodyXL" component="div" textAlign="left">
-              $ {priceRange[0].toLocaleString("en-US")} - ${" "}
+              ${priceRange[0].toLocaleString("en-US")} - $
               {priceRange[1].toLocaleString("en-US")}
             </Typography>
             <IconButton
