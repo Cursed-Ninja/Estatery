@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Main from "./components/Main";
+import { ThemeProvider } from "@mui/material";
+import theme from "./theme/theme";
+import Context from "./context/context";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Context>
+      <ThemeProvider theme={theme}>
+        <LocalizationProvider dateAdapter={AdapterMoment}>
+          <div className="App">
+            <Navbar />
+            <Main />
+          </div>
+        </LocalizationProvider>
+      </ThemeProvider>
+    </Context>
   );
 }
 
