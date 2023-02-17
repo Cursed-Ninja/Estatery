@@ -55,7 +55,6 @@ const Main = () => {
       <Grid item xs={12}>
         <Filters />
       </Grid>
-      <Grid item xs={12} container spacing={10}>
         {realEstates.map((realEstate) => {
           if (
             filter.Name !== "" &&
@@ -82,7 +81,6 @@ const Main = () => {
             </Grid>
           );
         })}
-      </Grid>
     </Grid>
   );
 };
