@@ -44,10 +44,10 @@
   width: 25px;
   height: 25px;
   background-color: #7065ee;
-  left: 10px;
-  top: 55%;
+  left: 9.5px;
+  top: 54.6%;
   transform: rotate(45deg);
-  border-radius: 2px;
+  border-radius: 5px;
 }
 
 .ribbon {
@@ -58,7 +58,7 @@
   color: white;
   left: 5.5px;
   top: 50.7%;
-  border-radius: 2px;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
